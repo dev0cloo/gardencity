@@ -51,121 +51,87 @@
     <section class="shop">
       <h2>Shop Our Garden Store</h2>
       <div class="products">
-        <div class="product">
+        <div class="product" data-id="1">
           <img
             src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=300&q=80"
             alt="Garden Trowel"
           />
-          <a href="#modal-trowel" class="product-title-link">
-            <h3 class="product-title clickable">Garden Trowel</h3>
-          </a>
+          <h3 class="product-title clickable">Garden Trowel</h3>
           <p class="product-short">
             Durable stainless steel trowel for all your planting needs.
           </p>
-          <p class="product-price">$12.99</p>
-          <button class="cta" disabled>Add to Cart</button>
+          <p class="product-price">&#8373;12.99</p>
+          <button class="cta add-to-cart">Add to Cart</button>
         </div>
-        <div class="product">
+        <div class="product" data-id="2">
           <img
             src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=300&q=80"
             alt="Watering Can"
           />
-          <a href="#modal-wateringcan" class="product-title-link">
-            <h3 class="product-title clickable">Watering Can</h3>
-          </a>
+          <h3 class="product-title clickable">Watering Can</h3>
           <p class="product-short">
             Classic metal watering can for gentle, even watering.
           </p>
-          <p class="product-price">$18.50</p>
-          <button class="cta" disabled>Add to Cart</button>
+          <p class="product-price">&#8373;18.50</p>
+          <button class="cta add-to-cart">Add to Cart</button>
         </div>
-        <div class="product">
+        <div class="product" data-id="3">
           <img
             src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=300&q=80"
             alt="Rose Plant"
           />
-          <a href="#modal-rose" class="product-title-link">
-            <h3 class="product-title clickable">Rose Plant</h3>
-          </a>
+          <h3 class="product-title clickable">Rose Plant</h3>
           <p class="product-short">
             Beautiful blooming rose, perfect for any garden or patio.
           </p>
-          <p class="product-price">$24.00</p>
-          <button class="cta" disabled>Add to Cart</button>
+          <p class="product-price">&#8373;24.00</p>
+          <button class="cta add-to-cart">Add to Cart</button>
         </div>
-        <div class="product">
+        <div class="product" data-id="4">
           <img
             src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=300&q=80"
             alt="Sunflower Seeds"
           />
-          <a href="#modal-sunflower" class="product-title-link">
-            <h3 class="product-title clickable">Sunflower Seeds</h3>
-          </a>
+          <h3 class="product-title clickable">Sunflower Seeds</h3>
           <p class="product-short">
             Grow your own sunflowers with our premium seed packets.
           </p>
-          <p class="product-price">$3.99</p>
-          <button class="cta" disabled>Add to Cart</button>
+          <p class="product-price">&#8373;3.99</p>
+          <button class="cta add-to-cart">Add to Cart</button>
         </div>
       </div>
-      <!-- Modals for each product -->
-      <div id="modal-trowel" class="modal">
+      <button id="cart-btn">
+        <span>🛒</span> Cart <span id="cart-count">0</span>
+      </button>
+      <div id="cart-modal" class="modal">
         <div class="modal-content">
-          <a href="#" class="close">&times;</a>
-          <h2>Garden Trowel</h2>
-          <img
-            src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=300&q=80"
-            alt="Garden Trowel"
-          />
-          <p>
-            A durable stainless steel trowel, perfect for digging, planting, and
-            potting. Ergonomic handle for comfortable use.
-          </p>
+          <span class="close" id="close-cart">&times;</span>
+          <h2>Your Cart</h2>
+          <ul id="cart-items"></ul>
+          <p id="cart-total"></p>
+          <button id="checkout-btn" class="cta">Checkout</button>
         </div>
       </div>
-      <div id="modal-wateringcan" class="modal">
+      <div id="info-modal" class="modal">
         <div class="modal-content">
-          <a href="#" class="close">&times;</a>
-          <h2>Watering Can</h2>
+          <span class="close" id="close-info">&times;</span>
+          <h2 id="info-title"></h2>
           <img
-            src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=300&q=80"
-            alt="Watering Can"
+            id="info-img"
+            src=""
+            alt=""
+            style="
+              width: 100%;
+              max-width: 300px;
+              border-radius: 12px;
+              margin-bottom: 1rem;
+            "
           />
-          <p>
-            Classic metal watering can with a long spout for gentle, even
-            watering. Holds up to 2 liters.
-          </p>
-        </div>
-      </div>
-      <div id="modal-rose" class="modal">
-        <div class="modal-content">
-          <a href="#" class="close">&times;</a>
-          <h2>Rose Plant</h2>
-          <img
-            src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=300&q=80"
-            alt="Rose Plant"
-          />
-          <p>
-            Beautiful blooming rose plant, perfect for gardens and patios. Comes
-            in a 1-gallon pot.
-          </p>
-        </div>
-      </div>
-      <div id="modal-sunflower" class="modal">
-        <div class="modal-content">
-          <a href="#" class="close">&times;</a>
-          <h2>Sunflower Seeds</h2>
-          <img
-            src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=300&q=80"
-            alt="Sunflower Seeds"
-          />
-          <p>
-            Premium sunflower seed packets. Grow tall, vibrant sunflowers easily
-            in your garden.
-          </p>
+          <p id="info-desc"></p>
         </div>
       </div>
     </section>
     <footer>&copy; 2025 Garden City Ghana. All rights reserved.</footer>
+    <script src="shop.js"></script>
   </body>
 </html>
